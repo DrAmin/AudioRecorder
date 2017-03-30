@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AudioRecoderLibrary</string>
+    <string name="audio_recorder_title">Audio Recorder</string>
+    <string name="audio_recorder_msg">Recording Time</string>
+    <string name="app_name_recording">Recording</string>
+    <string name="err_msg_delete_recording">Are you sure, you want to delete audio recording?</string>
+
+
+</resources>

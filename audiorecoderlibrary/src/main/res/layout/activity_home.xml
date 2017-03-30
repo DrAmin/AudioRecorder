@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/recording_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ToolbarStyle"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textSize="@dimen/font_20dp"
+                android:textColor="@android:color/white"
+                android:padding="@dimen/margin_10dp"/>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_grey">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/audio_recorder_msg"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font_20dp"
+            android:layout_above="@+id/chronometer"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/margin_20dp"/>
+
+        <Chronometer
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chronometer"
+            android:textSize="70dp"
+            android:textColor="@android:color/white"
+            android:fontFamily="sans-serif-light"
+            android:layout_centerInParent="true" />
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+            <ImageView
+                android:id="@+id/recording_imgPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_play_arrow_white_24dp"
+                android:padding="10dp"
+                android:layout_marginLeft="40dp"
+                android:alpha="0.5"
+                android:clickable="false"/>
+            <ImageView
+                android:id="@+id/recording_imgStop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_stop_white_24dp"
+                android:layout_marginLeft="40dp"
+                android:padding="10dp"
+                android:visibility="gone"/>
+            <!--            <ImageView
+                            android:id="@+id/recording_imgMic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:padding="@dimen/margin_10dp"
+                            android:src="@drawable/ic_mic_black_24dp" />-->
+
+            <!--<ImageView
+                android:id="@+id/recording_imgPause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_pause_white_24dp"
+                android:visibility="gone"/>-->
+            <ImageView
+                android:id="@+id/recording_imgDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="10dp"
+                android:alpha="0.5"
+                android:layout_marginRight="40dp"
+                android:clickable="false"
+                android:src="@drawable/ic_delete_white_24dp" />
+
+        </RelativeLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/recording_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_mic_white_24dp"
+            app:backgroundTint="@color/red"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            app:fabSize="normal"
+            app:elevation="4dp"
+            android:layout_marginBottom="@dimen/margin_34dp"
+            />
+
+    </RelativeLayout>
+</LinearLayout>
